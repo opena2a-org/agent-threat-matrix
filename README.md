@@ -74,7 +74,7 @@ This matrix maps every technique to four external references:
 
 | Framework | What It Provides |
 |-----------|-----------------|
-| [HackMyAgent](https://github.com/opena2a-org/hackmyagent) | Automated detection (199 checks, 115 attack payloads) |
+| [HackMyAgent](https://github.com/opena2a-org/hackmyagent) | Automated detection (204 checks, 115 attack payloads) |
 | [DVAA](https://github.com/opena2a-org/damn-vulnerable-ai-agent) | Lab validation (10 vulnerable agents, 14 challenges) |
 | [OASB](https://oasb.ai) | Defensive controls (72 controls across 11 categories) |
 | MITRE ATT&CK / ATLAS / OWASP LLM | Gap analysis showing what existing frameworks cover and where the agent layer extends beyond them |
@@ -236,7 +236,7 @@ Apache-2.0. The framework is free to use, cite, and build upon.
 
 | Project | Role |
 |---------|------|
-| [HackMyAgent](https://github.com/opena2a-org/hackmyagent) | Automated detection for ATM techniques (199 checks, 115 payloads) |
+| [HackMyAgent](https://github.com/opena2a-org/hackmyagent) | Automated detection for ATM techniques (204 checks, 115 payloads) |
 | [DVAA](https://github.com/opena2a-org/damn-vulnerable-ai-agent) | Lab validation environment (10 agents, 14 challenges) |
 | [OASB](https://oasb.ai) | Defensive benchmark (72 controls) |
 | [AI Agent Kill Chain](https://github.com/opena2a-org/ai-agent-kill-chain) | Tactical framework (the 9-stage progression model) |
