@@ -155,8 +155,8 @@
       "evidenceTier": "observed",
       "attackClass": "AGENT-IMPERSONATE",
       "hmaChecks": [
-        "A2A-001",
-        "A2A-002"
+        "AIM-001",
+        "AIM-002"
       ],
       "dvaaValidation": "Orchestrator /a2a/agent-card",
       "oasbControls": [
@@ -634,8 +634,8 @@
       "evidenceTier": "validated",
       "attackClass": "AGENT-IMPERSONATE",
       "hmaChecks": [
-        "A2A-001",
-        "A2A-002"
+        "AIM-001",
+        "AIM-002"
       ],
       "dvaaValidation": "L4-02",
       "oasbControls": [
@@ -1275,13 +1275,12 @@
     {
       "id": "PHANTOM-SOUL",
       "name": "Phantom Soul",
-      "description": "Agent deployed with zero behavioral constraints — no SOUL.md, no system prompt, no governance",
+      "description": "Agent deployed with zero behavioral constraints \u2014 no SOUL.md, no system prompt, no governance",
       "techniques": [
         "T-1006"
       ],
       "hmaChecks": [
-        "SOUL-HB-001",
-        "SOUL-HB-002"
+        "SOUL-OVERRIDE-001"
       ],
       "category": "governance"
     },
@@ -1293,8 +1292,7 @@
         "T-2008"
       ],
       "hmaChecks": [
-        "SOUL-CB-001",
-        "SOUL-CB-002"
+        "SOUL-OVERRIDE-001"
       ],
       "category": "governance"
     },
@@ -1307,8 +1305,7 @@
         "T-4001"
       ],
       "hmaChecks": [
-        "SOUL-DH-001",
-        "SOUL-DH-002"
+        "SOUL-OVERRIDE-001"
       ]
     },
     {
@@ -1321,22 +1318,18 @@
         "T-4006"
       ],
       "hmaChecks": [
-        "SOUL-TH-003",
-        "SOUL-TH-004"
+        "SOUL-OVERRIDE-001"
       ]
     },
     {
       "id": "SOUL-FORK",
       "name": "Soul Forking",
-      "description": "Different behavior under evaluation vs production — agent passes safety tests but behaves differently in deployment",
+      "description": "Different behavior under evaluation vs production \u2014 agent passes safety tests but behaves differently in deployment",
       "techniques": [
         "T-5002"
       ],
       "hmaChecks": [
-        "SOUL-AS-001",
-        "SOUL-AS-002",
-        "SOUL-HT-001",
-        "SOUL-HT-002"
+        "SOUL-OVERRIDE-001"
       ],
       "category": "governance"
     },
@@ -1349,8 +1342,7 @@
         "T-5002"
       ],
       "hmaChecks": [
-        "SOUL-HO-001",
-        "SOUL-HO-002"
+        "SOUL-OVERRIDE-001"
       ],
       "category": "governance"
     },
@@ -1363,10 +1355,7 @@
         "T-2003"
       ],
       "hmaChecks": [
-        "SOUL-HV-001",
-        "SOUL-HV-002",
-        "SOUL-HV-003",
-        "SOUL-HV-004"
+        "SOUL-OVERRIDE-001"
       ],
       "category": "governance"
     },
@@ -1378,7 +1367,7 @@
         "T-4002"
       ],
       "hmaChecks": [
-        "SOUL-TH-005"
+        "SOUL-OVERRIDE-001"
       ],
       "category": "governance"
     },
@@ -1395,8 +1384,7 @@
         "T-2008"
       ],
       "hmaChecks": [
-        "SOUL-IH-001",
-        "SOUL-IH-002",
+        "SOUL-OVERRIDE-001",
         "PROMPT-001",
         "PROMPT-002",
         "PROMPT-003",
@@ -1415,8 +1403,7 @@
         "T-2008"
       ],
       "hmaChecks": [
-        "SOUL-TH-001",
-        "SOUL-TH-002"
+        "SOUL-OVERRIDE-001"
       ],
       "category": "governance"
     },
@@ -1544,7 +1531,7 @@
     {
       "id": "SKILL-MEM-AMP",
       "name": "Skill Memory Amplification",
-      "description": "Skill plants payload in agent memory that survives skill uninstall — cross-session persistence",
+      "description": "Skill plants payload in agent memory that survives skill uninstall \u2014 cross-session persistence",
       "techniques": [
         "T-3004"
       ],
@@ -1556,7 +1543,7 @@
     {
       "id": "SUPPLY-CHAIN-INSTALL",
       "name": "Supply Chain Install Attack",
-      "description": "Unsigned installation scripts executed without integrity verification — curl|sh without checksum",
+      "description": "Unsigned installation scripts executed without integrity verification \u2014 curl|sh without checksum",
       "techniques": [
         "T-9003"
       ],
@@ -1591,8 +1578,8 @@
         "T-5002"
       ],
       "hmaChecks": [
-        "A2A-001",
-        "A2A-002"
+        "AIM-001",
+        "AIM-002"
       ],
       "category": "infrastructure"
     },
@@ -1606,10 +1593,10 @@
         "T-1005"
       ],
       "hmaChecks": [
-        "AITOOL-001",
-        "AITOOL-002",
-        "AITOOL-003",
-        "AITOOL-004"
+        "AUTH-001",
+        "AUTH-002",
+        "NET-001",
+        "ENV-001"
       ],
       "category": "infrastructure"
     },
@@ -1648,7 +1635,7 @@
     {
       "id": "INTEGRITY-BYPASS",
       "name": "Integrity Check Bypass",
-      "description": "Digest or hash verification bypass on empty or missing values — tampered artifacts pass silently",
+      "description": "Digest or hash verification bypass on empty or missing values \u2014 tampered artifacts pass silently",
       "techniques": [
         "T-9001"
       ],
@@ -1660,7 +1647,7 @@
     {
       "id": "LLM-EXPOSE",
       "name": "LLM Inference Exposure",
-      "description": "LLM inference endpoints exposed without authentication — allows arbitrary prompt execution",
+      "description": "LLM inference endpoints exposed without authentication \u2014 allows arbitrary prompt execution",
       "techniques": [
         "T-1001",
         "T-1004"
@@ -1731,7 +1718,7 @@
     {
       "id": "TOCTOU-RACE",
       "name": "TOCTOU Race Condition",
-      "description": "Time-of-check-time-of-use race between verification and execution — swap window for attackers",
+      "description": "Time-of-check-time-of-use race between verification and execution \u2014 swap window for attackers",
       "techniques": [
         "T-9001"
       ],
@@ -1750,9 +1737,9 @@
         "T-7005"
       ],
       "hmaChecks": [
-        "HMA-NMC-001",
-        "HMA-NMC-002",
-        "HMA-NMC-003",
+        "NEMO-001",
+        "NEMO-002",
+        "NEMO-003",
         "NEMO-004",
         "NEMO-007"
       ]
@@ -1760,33 +1747,33 @@
     {
       "id": "NEMO-NETWORK-EXPOSE",
       "name": "NemoClaw Network Exposure",
-      "description": "NemoClaw network services bound to public interfaces — gateway, k3s API, mDNS beacons",
+      "description": "NemoClaw network services bound to public interfaces \u2014 gateway, k3s API, mDNS beacons",
       "techniques": [
         "T-1001",
         "T-1004",
         "T-5001"
       ],
       "hmaChecks": [
-        "HMA-NMC-010",
-        "HMA-NMC-011",
-        "HMA-NMC-012",
-        "HMA-NMC-013",
-        "HMA-NMC-014",
-        "HMA-NMC-015"
+        "NEMO-004",
+        "NEMO-005",
+        "NEMO-006",
+        "NEMO-007",
+        "NEMO-008",
+        "NEMO-009"
       ],
       "category": "nemoclaw"
     },
     {
       "id": "NEMO-OPENCLAW-INHERIT",
       "name": "NemoClaw OpenClaw Inheritance",
-      "description": "Inherited OpenClaw flaws that survive NemoClaw sandboxing — heartbeat persistence, pre-allowed APIs",
+      "description": "Inherited OpenClaw flaws that survive NemoClaw sandboxing \u2014 heartbeat persistence, pre-allowed APIs",
       "techniques": [
         "T-1001"
       ],
       "hmaChecks": [
-        "HMA-NMC-040",
-        "HMA-NMC-041",
-        "HMA-NMC-042",
+        "NEMO-006",
+        "NEMO-007",
+        "NEMO-008",
         "NEMO-010"
       ],
       "category": "nemoclaw"
@@ -1800,9 +1787,9 @@
         "T-7001"
       ],
       "hmaChecks": [
-        "HMA-NMC-030",
-        "HMA-NMC-031",
-        "HMA-NMC-032",
+        "NEMO-003",
+        "NEMO-004",
+        "NEMO-005",
         "NEMO-003",
         "NEMO-005",
         "NEMO-006",
@@ -1818,9 +1805,9 @@
         "T-9006"
       ],
       "hmaChecks": [
-        "HMA-NMC-020",
-        "HMA-NMC-021",
-        "HMA-NMC-022",
+        "NEMO-010",
+        "NEMO-001",
+        "NEMO-002",
         "NEMO-001",
         "NEMO-002",
         "NEMO-009"
@@ -1846,7 +1833,7 @@
     {
       "id": "BEHAVIORAL-IMPERSONATE",
       "name": "Behavioral Impersonation",
-      "description": "Using stolen credentials detected via behavioral baseline mismatch — agent DNA forgery",
+      "description": "Using stolen credentials detected via behavioral baseline mismatch \u2014 agent DNA forgery",
       "techniques": [
         "T-4002"
       ],
